@@ -1,0 +1,35 @@
+.address {
+    font-style: normal;
+    margin-top: 20px;
+
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    
+    &__map {
+        color: #ffffff;
+    
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &__map:hover,
+    &__map:focus {
+        color: var(--accent-color);
+    }
+    
+    &__contacts {
+        color: rgba(255, 255, 255, 0.376);
+    
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+    
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &__contacts:hover,
+    &__contacts:focus {
+        color: var(--accent-color);
+    }
+}

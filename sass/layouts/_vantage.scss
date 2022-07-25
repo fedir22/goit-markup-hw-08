@@ -1,0 +1,39 @@
+.section-vantage {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.vantage {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    &__thumb {
+        background: var(--filter-button-backround);
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        height: 120px;
+        margin-bottom: 30px;
+    }
+    
+    &__title {
+        color: var(--title-text-color);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        width: 270px;
+        margin-bottom: 10px;
+    }
+    
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+    
+    &__text {
+        width: 270px;
+    }
+}

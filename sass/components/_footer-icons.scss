@@ -1,0 +1,31 @@
+.footer-icons {
+    display: flex;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: #ffffff;
+    
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+    
+    &__link:hover,
+    &__link:focus {
+        background-color: var(--hover-color);
+        color: #ffffff;
+    }
+    
+    &__svg {
+        fill: currentColor;
+    }
+}
