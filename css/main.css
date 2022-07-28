@@ -12,6 +12,7 @@
   --filter-button-backround: #f5f4fa;
   --footer-backround: #2f303a;
   --cliets-and-icon-grey: #afb1b8;
+  --items: 3;
 }
 
 .visually-hidden {
@@ -47,7 +48,7 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -214,11 +215,26 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .filter {
@@ -666,10 +682,21 @@ textarea:focus {
 }
 
 .section {
-  padding-bottom: 94px;
+  padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+  }
+}
+
 .section--top {
-  padding-top: 94px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section--top {
+    padding-top: 94px;
+  }
 }
 
 .site-nav {
@@ -875,17 +902,16 @@ textarea:focus {
   letter-spacing: 0.03em;
 }
 
-.section-vantage {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .vantage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .vantage__thumb {
   background: var(--filter-button-backround);
@@ -899,7 +925,7 @@ textarea:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 270px;
+  width: 450px;
   height: 120px;
   margin-bottom: 30px;
 }
@@ -909,16 +935,32 @@ textarea:focus {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  width: 270px;
+  width: 450px;
   margin-bottom: 10px;
 }
-.vantage__item:not(:last-child) {
-  margin-right: 30px;
-}
 .vantage__text {
-  width: 270px;
+  width: 450px;
 }
 
+@media screen and (max-width: 767px) {
+  .vantage__title {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .vantage__thumb,
+.vantage__title,
+.vantage__text {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .vantage__thumb,
+.vantage__title,
+.vantage__text {
+    width: 270px;
+  }
+}
 .works {
   display: -webkit-box;
   display: -ms-flexbox;

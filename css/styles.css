@@ -38,7 +38,7 @@ img {
 }
 
 /* Контейнер */
-.container {
+/* .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -50,7 +50,7 @@ img {
 }
 .section--top {
   padding-top: 94px;
-}
+} */
 
 .list {
   list-style: none;
