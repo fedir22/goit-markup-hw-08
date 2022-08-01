@@ -1,7 +1,19 @@
 .f-strong {
-    margin-left: auto;
+  margin-left: auto;
+
+  @media screen and (max-width: 1199px) {
+    display: block;
+  }
 }
-.footer-form__email {
+
+.footer-form {
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__email {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -17,8 +29,13 @@
     background: #2f303a;
 
     padding: 16px 15px;
-}
 
-.footer-form__email:focus {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__email:focus {
     outline: transparent;
+  }
 }
