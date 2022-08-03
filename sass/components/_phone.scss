@@ -40,7 +40,13 @@
   &__icon {
     margin-right: 10px;
     fill: currentColor;
+
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+    }
   }
+
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -48,5 +54,15 @@
 @media screen and (min-width: 1200px) {
   .phone__item:not(:last-child) {
     margin-right: 50px;
+  }
+}
+
+.phone__icon-tel {
+  margin-right: 10px;
+  fill: currentColor;
+
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
   }
 }

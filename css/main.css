@@ -256,6 +256,7 @@ img {
       flex-wrap: wrap;
   margin-bottom: 40px;
   gap: 8px;
+  row-gap: 15px;
 }
 @media screen and (min-width: 768px) {
   .filter {
@@ -305,15 +306,40 @@ img {
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
-.f-strong {
-  margin-left: auto;
-}
 @media screen and (max-width: 1199px) {
   .f-strong {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .f-strong {
+    margin-left: auto;
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-form {
     display: -webkit-box;
@@ -328,8 +354,10 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
-  min-width: 368px;
+  width: 100%;
+  font-weight: 400;
   height: 50px;
+  margin-bottom: 20px;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -338,9 +366,19 @@ img {
   background: #2f303a;
   padding: 16px 15px;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) {
   .footer-form__email {
-    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-form__email {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form__email {
+    width: 358px;
   }
 }
 .footer-form__email:focus {
@@ -543,6 +581,18 @@ img {
   background-color: var(--background-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
 }
 .modal__close {
   position: absolute;
@@ -797,6 +847,12 @@ textarea:focus {
   margin-right: 10px;
   fill: currentColor;
 }
+@media screen and (min-width: 1200px) {
+  .phone__icon {
+    width: 16px;
+    height: 12px;
+  }
+}
 @media screen and (max-width: 767px) {
   .phone {
     display: none;
@@ -808,6 +864,17 @@ textarea:focus {
     margin-right: 50px;
   }
 }
+.phone__icon-tel {
+  margin-right: 10px;
+  fill: currentColor;
+}
+@media screen and (min-width: 1200px) {
+  .phone__icon-tel {
+    width: 10px;
+    height: 16px;
+  }
+}
+
 .section {
   padding-bottom: 60px;
 }
@@ -1134,8 +1201,8 @@ textarea:focus {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero/Header-img-tel@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/Header-img-tel@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/Header-img-tel@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Header-img-tel@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1254,7 +1321,6 @@ textarea:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 450px;
   height: 120px;
   margin-bottom: 30px;
 }
@@ -1264,11 +1330,7 @@ textarea:focus {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  width: 450px;
   margin-bottom: 10px;
-}
-.vantage__text {
-  width: 450px;
 }
 
 @media screen and (max-width: 767px) {
